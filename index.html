@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Melody's Matching Pairs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <div class="title">
+          <span class="unicorn">🦄</span>
+          <h1>Melody's Matching Pairs</h1>
+        </div>
+        <div class="controls">
+          <div class="group-select">
+            <label for="group">Choose theme</label>
+            <select id="group" aria-label="Choose theme">
+              <option value="animals">Animals</option>
+              <option value="sweets">Sweets</option>
+              <option value="food">Food</option>
+              <option value="colours">Colours</option>
+            </select>
+          </div>
+          <div class="timer">Time: <span id="timer">90</span>s</div>
+          <button id="startBtn" class="btn rainbow">Start</button>
+        </div>
+      </header>
+
+      <section class="board-wrap">
+        <div id="board" class="board" aria-live="polite">
+          <!-- Cards will be inserted here by JavaScript -->
+        </div>
+      </section>
+
+      <div id="overlay" class="overlay hidden">
+        <div class="overlay-card">
+          <div id="overlayEmoji" class="overlay-emoji">🎉</div>
+          <h2 id="overlayTitle">You win!</h2>
+          <p id="overlayMsg">All pairs matched — a rainbow for you!</p>
+          <button id="retryBtn" class="btn">Play again</button>
+        </div>
+      </div>
+
+      <!-- celebratory rainbow animation -->
+      <div id="rainbow" class="rainbow hidden" aria-hidden="true"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
